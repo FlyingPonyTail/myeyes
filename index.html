@@ -96,7 +96,8 @@
 
             // --- 數字累加區塊 ---
             // 在網址後面加上 /up，API 就會自動幫你的數字 +1，並回傳最新的總數
-            fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`)
+            fetch(`https://api.counterapi.dev/v1/${namespace}/${key}?t=${Date.now()}`, { 
+            cache: 'no-store'
                 .then(response => response.json())
                 .then(data => {
                     // 把畫面的數字立刻更新成最新的總數
