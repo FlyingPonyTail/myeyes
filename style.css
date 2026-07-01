@@ -1,4 +1,7 @@
         /* 讓畫面變成深色背景，並讓圖片和計數器置中排列 */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
         body {
             margin: 0;
             padding: 0;
